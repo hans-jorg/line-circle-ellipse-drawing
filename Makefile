@@ -3,10 +3,11 @@
 CFLAGS= -g
 LDLIBS=
 
-drawing-algorithms: drawing-algorithms.o
+drawing-test: bresenham.o  main.o  mark.o  midpoint.o  screen.o
+	$(CC) $(CFLAGS) -o $@  $^ $(LDLIBS)
 
 clean:
-	rm drawing-algorithms *.o
+	rm -f drawing-test *.o *.pgm
 
-run: drawing-algorithms
-	./drawing-algorithms saida.pbm
+run: drawing-test
+	./drawing-test

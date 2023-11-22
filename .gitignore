@@ -1,3 +1,7 @@
+#
+# Generated image files
+*.pgm
+
 # Prerequisites
 *.d
 
